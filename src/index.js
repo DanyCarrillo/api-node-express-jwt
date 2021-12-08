@@ -1,12 +1,16 @@
 const express = require('express');
+const routerApi = require('./core/routes');
+const PORT = process.env.PORT ||  3000;
+
 
 const app = express();
-const port = 3000;
+app.use(express.json());
+routerApi(app);
 
 app.get('/', (req, res) => {
   res.status(200).send('Hola mundo');
 })
 
-app.listen(port, ()=> {
-  console.log(`http://localhost:${port}`);
+app.listen(PORT, ()=> {
+  console.log(`http://localhost:${PORT}`);
 })
