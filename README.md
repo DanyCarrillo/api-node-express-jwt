@@ -16,9 +16,9 @@ Guía que permitirá conocer todo lo necesario para ejecutar y consumir la API d
 
 ## Configuraciones
 
-3. Ingresar a la carpeta `docs/database` y ejecutar query que se encuentra en el archivo `goluukdb.sql`
+3. Ingresar a la carpeta `docs/db` y ejecutar query que se encuentra en el archivo `goluukdb.sql`
 4. Cambiar de nombre el archivo `.env.example` por `.env`, además, se debe ingresar las variables de entorno.
-5. Importar la colección de insomnia que se encuentra en la carpeta `docs/insomnia-collection`.
+5. Importar la colección de insomnia que se encuentra en la carpeta `docs/insomnia`.
 
 Si ya tenemos todos los pasos ejecutados, estamos listos para correr el proyecto.
 
