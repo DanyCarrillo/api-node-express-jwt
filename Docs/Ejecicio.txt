@@ -1,0 +1,73 @@
+Hola dany
+
+Espero que este correo electronico te encuentre bien. Como parte del proceso de contratación, requerimos que complete una prueba técnica. Se le pedirá que cree una API usando NodeJS.
+
+
+La fecha final para enviar su prueba es el 8 de diciembre de 2021. Lea todas las instrucciones detenidamente,
+
+
+Imagine que un cliente solicita una aplicación que permite a los usuarios dar me gusta a las películas de una lista de películas en la plataforma. El cliente también solicitó agregar una capa de autenticación. La capa de autenticación valida la interacción con la API en función de dos tipos de usuarios: administrador y usuario regular.
+
+
+Los usuarios administradores deberían poder:
+
+1. Agregar películas
+2. Modificar la información de películas
+3. Quitar películas
+4. Crear usuarios administradores
+5. Ver usuarios en la plataforma [PAGINACION]
+6. Eliminar usuarios.
+7. Prohibir usuarios. (Los usuarios prohibidos deberían ver este error al iniciar sesión)
+8. Ver películas que le gustaron a un usuario específico (es decir, usuario /: id / películas) [PAGINACION]
+
+Los usuarios habituales deberían poder:
+
+1. Registrarse
+2. Ver toda la lista de películas [PAGINACION]
+3. Como una película
+4. Enumere todas las películas que les gustaron [PAGINACION]
+5. Obtener la información de su perfil
+
+
+Además, considere que:
+
+1. Los puntos finales de la colección (puntos finales que devuelven listas) deben permitir la paginación y la clasificación. (No dude en definir los campos que se pueden ordenar para cada lista: usuarios, películas, películas que le gustaron a los usuarios).
+2. Ambos usuarios deberían poder iniciar sesión en la plataforma utilizando un usuario / contraseña.
+3. Los usuarios deben estar autenticados para realizar las operaciones descritas anteriormente para los usuarios administrativos y habituales.
+4. El punto final de registro no debe solicitar ninguna autenticación para crear usuarios regulares.
+
+Para desarrollar la API, puede:
+
+Utilice cualquier base de datos que desee.
+Siga las mejores prácticas para la codificación (es decir, la guía de estilo de código de Airbnb https://github.com/airbnb/javascript)
+Siga las mejores prácticas de Rest (es decir, https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+Considere qué información debería ser útil para guardar para el usuario y la tabla de películas (considere para las películas el título, la descripción, la URL de la imagen, la fecha de lanzamiento, etc.)
+Utilice express o Hapi para crear la API. (No se permite ningún otro marco que no sea)
+Utilice JWT como token de acceso.
+Use PassportJS con estrategia local (http://www.passportjs.org/packages/passport-local/) Es posible que deba devolver un JSON con información del usuario en lugar de realizar una redirección.
+Utilice git para realizar un seguimiento de todo su progreso. (Esto significa que requerimos que cree confirmaciones atómicas para ver el progreso y las características implementadas durante su prueba).
+
+
+¿Qué se evaluará?
+
+Estructura y coherencia del código.
+Resto de la estructura de la API.
+Funcionalidad.
+Manejo de errores.
+Capa de autenticación.
+Diseño de bases de datos.
+Documentación
+Historial de confirmaciones
+
+
+Una vez que haya terminado su prueba, le solicitaremos que envíe un correo electrónico con:
+
+Acceso al repositorio de Git a jaime.franco@goluuk.com.
+Archivo POSTMAN que documenta su API.
+Esquema de la base de datos y datos semilla iniciales.
+Instrucciones en el archivo README para ejecutar el proyecto (esto debería estar disponible en su repositorio).
+Si tiene alguna pregunta, envíe un correo electrónico a jaime.franco@gooluuk.com, y responderemos cualquier duda o consulta que tenga.
+
+
+
+¡Espero que disfrutes de la prueba y te diviertas mientras lo haces!
