@@ -16,7 +16,7 @@ const StatusEntity = {
 
 class Status extends Model {
   static associate(models) {
-    this.hasMany(models.Movie, {
+    this.hasMany(models.Movies, {
       as: 'movie',
       foreignKey: 'statusId'
     });

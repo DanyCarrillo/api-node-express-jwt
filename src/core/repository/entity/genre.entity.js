@@ -16,7 +16,7 @@ const GenreEntity = {
 
 class Genre extends Model {
   static associate(models) {
-    this.hasMany(models.Movie, {
+    this.hasMany(models.Movies, {
       as: 'movie',
       foreignKey: 'genreId'
     });

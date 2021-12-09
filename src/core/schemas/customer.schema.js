@@ -12,7 +12,7 @@ const userId = Joi.number().integer();
 const genderId = Joi.number().integer();
 const email = Joi.string().email();
 const password =  Joi.string().min(NUMBERS.EIGTH);
-const roleId = Joi.number().integer().max(NUMBERS.ONE);
+const roleId = Joi.number().integer();
 
 const getCustomerSchema = Joi.object({
   id: id.required(),

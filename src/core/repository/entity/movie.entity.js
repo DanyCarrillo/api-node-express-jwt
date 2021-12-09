@@ -2,7 +2,7 @@ const { Model, DataTypes, Sequelize } = require('sequelize');
 const {T_MOVIES, T_STATUS, T_GENRES} = require('../../../utils/constants/database.constants');
 
 
-const MovieEntity = {
+const MoviesEntity = {
   id: {
     allowNull: false,
     autoIncrement: true,
@@ -15,8 +15,27 @@ const MovieEntity = {
   },
   description: {
     allowNull: false,
-    type: DataTypes.STRING,
-    unique: true,
+    type: DataTypes.TEXT
+  },
+  urlImage: {
+    field: 'image_url',
+    allowNull: false,
+    type: DataTypes.STRING
+  },
+  premiereDate: {
+    field: 'premiere_date',
+    allowNull: false,
+    type: DataTypes.DATE
+  },
+  created: {
+    allowNull: false,
+    type: DataTypes.DATE,
+    defaultValue: Sequelize.NOW
+  },
+  modified: {
+    allowNull: false,
+    type: DataTypes.DATE,
+    defaultValue: Sequelize.NOW
   },
   genreId: {
     field: 'id_genre',
@@ -35,38 +54,24 @@ const MovieEntity = {
       model: T_STATUS,
       key: 'id'
     }
-  },
-  premiereDate: {
-    allowNull: false,
-    type: DataTypes.DATE
-  },
-  created: {
-    allowNull: false,
-    type: DataTypes.DATE,
-    defaultValue: Sequelize.NOW
-  },
-  modified: {
-    allowNull: false,
-    type: DataTypes.DATE,
-    defaultValue: Sequelize.NOW
   }
 }
 
-class Movie extends Model {
-
+class Movies extends Model {
   static associate(models) {
-    this.belongsTo(models.Status, {as: 'status'});
-    this.belongsTo(models.Genre, {as: 'genre'});
+    this.belongsTo(models.Genre,{ as: 'genres' });
+    this.belongsTo(models.Status,{ as: 'status' });
   }
+
   static config(sequelize) {
     return {
       sequelize,
       tableName: T_MOVIES,
-      modelName: 'Movie',
+      modelName: 'Movies',
       timestamps: false
     }
   }
 }
 
 
-module.exports = { T_MOVIES, MovieEntity, Movie }
+module.exports = { T_MOVIES, MoviesEntity, Movies }

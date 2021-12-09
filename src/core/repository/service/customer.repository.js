@@ -1,7 +1,7 @@
 const { models } = require('../../../libs/sequelize');
 const NUMBERS = require('../../../utils/constants/numbers.constants');
 
-class CusotmerMovieRepository{
+class CusotmerRepository{
 
   async find(){
     return await models.Customer.findAll()
@@ -14,7 +14,9 @@ class CusotmerMovieRepository{
   }
 
   async create(data){
-    return await models.Customer.create(data);
+    return await models.Customer.create(data,{
+      include: ['user']
+    });
   }
 
   async update(identifier, changes){
@@ -27,6 +29,10 @@ class CusotmerMovieRepository{
     return await customer.update({statusId: NUMBERS.TWO});
   }
 
+  async disable(identifier){
+    const customer = await this.findOne(identifier);
+    return await customer.update({statusId: NUMBERS.THREE});
+  }
 }
 
-module.exports = CusotmerMovieRepository;
+module.exports = CusotmerRepository;

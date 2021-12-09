@@ -4,9 +4,9 @@ const BD_TABLES = {
   T_ROLES: 'roles',
   T_GENRES: 'genres',
   T_GENDERS: 'genders',
-  T_PROFILES: 'profiles',
+  T_CUSTOMERS: 'customers',
   T_MOVIES: 'movies',
-  T_USER_MOVIE: 'user_movie'
+  T_CUSTOMER_MOVIE: 'customer_movie'
 }
 
 module.exports = BD_TABLES;
